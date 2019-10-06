@@ -108,6 +108,19 @@ Enter the full path to the file or directory to convert.
 
 ```
 Destination folder for TXT []:
+(Press [Enter] for current working directory)
 ```
 
 Enter the full path to the directory where the result file(s) should be outputted.
+
+The script will now covert the PDF via OCR into a plaintext file:
+
+### Testing the installation
+For testing purposes, a `test_files` directory is included. You can press [Enter] for the source and destination directories & verify that the `image.pdf` file is converted. It will also be located in the `test_files` directory:
+
+```
+Converted C:\Users\mark\ocr2text\image.pdf
+Percent: [##########] 100%
+1 file converted
+```
+
