@@ -1,0 +1,4 @@
+Pillow==6.1.0
+pdf2image==1.9.0
+pytesseract==0.2.7
+textract==1.6.3
