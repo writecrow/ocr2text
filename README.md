@@ -9,8 +9,6 @@ This script relies on an industry-standard OCR library managed by Google, called
   * [Install Tesseract](#install-tesseract)
   * [Install Poppler](#install-poppler)
 - [Usage](#usage)
-  * [Single file](#single-file)
-  * [Multiple files](#multiple-files)
 
 # Setup
 
@@ -107,3 +105,11 @@ Indicate file or folder of source PDF(s) []:
 (Press [Enter] for current working directory)
 
 ```
+
+Enter the full path to the file or directory to convert.
+
+```
+Destination folder for TXT []:
+```
+
+Enter the full path to the directory where the result file(s) should be outputted.

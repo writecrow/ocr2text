@@ -104,26 +104,27 @@ def convert_recursive(source, destination, count):
     ''' Helper function for looping through files recursively '''
     for dirpath, dirnames, files in os.walk(source):
         for name in files:
-            count = convert(os.path.join(dirpath, name), source, destination, count, pdfCounter, name)
+            filename, file_extension = os.path.splitext(name)
+            if (file_extension.lower() != '.pdf'):
+                continue
+            relative_directory = os.path.relpath(dirpath, source)
+            source_path = os.path.join(dirpath, name)
+            output_directory = os.path.join(destination, relative_directory)
+            output_filename = os.path.join(output_directory, filename + '.txt')
+            if not os.path.exists(output_directory):
+                os.makedirs(output_directory)
+            count = convert(source_path, output_filename, count, pdfCounter)
     return count
 
 
-def convert(sourcefile, source, destination, count, pdfCounter, filename):
-    filename, file_extension = os.path.splitext(sourcefile)
-    if (file_extension.lower() == '.pdf'):
-        text = extract_tesseract(sourcefile)
-        filepath = os.path.dirname(sourcefile)
-        relative_directory = os.path.relpath(filepath, source)
-        output_directory = os.path.join(destination, relative_directory)
-        output_filename = os.path.join(output_directory, filename)
-        if not os.path.exists(output_directory):
-            os.makedirs(output_directory)
-        with open(output_filename + '.txt', 'w', encoding='utf-8') as f_out:
-            f_out.write(text)
-        print()
-        print('Converted ' + source)
-        count += 1
-        update_progress(count / pdfCounter)
+def convert(sourcefile, destination_file, count, pdfCounter):
+    text = extract_tesseract(sourcefile)
+    with open(destination_file, 'w', encoding='utf-8') as f_out:
+        f_out.write(text)
+    print()
+    print('Converted ' + source)
+    count += 1
+    update_progress(count / pdfCounter)
     return count
 
 count = 0
@@ -148,10 +149,11 @@ if destination == '':
 if (os.path.exists(source)):
     if (os.path.isdir(source)):
         count = convert_recursive(source, destination, count)
-    else:
-        # Todo -fix name source/dest
-        # count = convert(sourcefile, source, destination, count, 1, filename)
-        print('to do')
+    elif os.path.isfile(source):  
+        filepath, fullfile = os.path.split(source)
+        filename, file_extension = os.path.splitext(fullfile)
+        if (file_extension.lower() == '.pdf'):
+            count = convert(source, os.path.join(destination, filename + '.txt'), count, 1)
     plural = 's'
     if count == 1:
         plural = ''
