@@ -1,20 +1,27 @@
 # PDF to TXT (with OCR)
-> This Python script will apply OCR (Optical Character Recognition) to PDFs and output the result to TXT files (in UTF-8 encoding).
+Given one or more PDFs that may include text-as-image content, use OCR (Optical Character Recognition) to convert the content to TXT files (in UTF-8 encoding).
 
-This script relies on an industry-standard OCR library managed by Google, called Tesseract. Since this is written in C++, for Python to be able to use it, it needs to be installed (instructions below). Similarly, a PDF-to-image library, Poppler, will need to be installed on Windows and Mac systems.
+## Rationale
+A survey of existing PDF-to-TXT solutions found no extant solutions that met all of the following criteria:
+- Is an offline tool (thus keeping secure identifying human-subject data)
+- Provides conversion from PDF to TXT (most existing OCR integrations assume an image as input)
+- Supports batch processing of multiple files
 
-### Contents
-- [Setup](#setup)
+## Assumptions
+- This is (currently) a command-line tool, written in Python. Basic familiarity with executing commands in a terminal, as well as directory structure, is assumed. 
+- It is assumed that you have Python version 3.x installed, as well as [Pip](https://pypi.org/project/pip/).
+- This script relies on an industry-standard OCR library managed by Google, called [Tesseract](https://github.com/tesseract-ocr/tesseract). Since it is written in C++, for Python to be able to use it, it needs to be installed separately (instructions below). Similarly, a PDF-to-image library, [Poppler](https://gitlab.freedesktop.org/poppler/poppler), will need to be installed on Windows and Mac systems.
+
+## Setup
+- [Windows](##windows)
   * [Install Python requirements](#install-python-requirements)
   * [Install Tesseract](#install-tesseract)
   * [Install Poppler](#install-poppler)
-- [Usage](#usage)
 
-# Setup
+## Windows
 
-## Install Python requirements
-
-First, download this project to an empty folder. After unpacking the project, navigate to the folder via the command line and run the following command:
+1. Download this project to any empty folder on your Windows machine (for example, `C:\Users\mark\Desktop`).
+2. After unzipping the project, navigate to the folder via the command line and run the following command:
 
 ```
 pip install --user --requirement requirements.txt
