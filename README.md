@@ -15,6 +15,7 @@ A survey of existing PDF-to-TXT solutions found no extant solutions that meet al
 ## Setup
 - [Windows](##windows)
 - [MacOS](##macos)
+- [Linux](##linux)
 
 ## Windows
 
@@ -43,6 +44,14 @@ A survey of existing PDF-to-TXT solutions found no extant solutions that meet al
 4. Download this Github project to `/Users/mark/Desktop/ocr`).
 5. Unzip the project.
 6. Open a terminal and navigate to the folder via the command line (e.g., `cd /Users/mark/Desktop/ocr/ocr2text`)
+7. Run `pip install --user --requirement requirements.txt`
+
+## Linux
+1. `sudo apt-get install tesseract-ocr`
+2. Most distros ship with `pdftoppm` and `pdftocairo`. If they are not installed, refer to your package manager to install `poppler-utils`
+4. Download this Github project.
+5. Unzip the project.
+6. Open a terminal and navigate to the folder
 7. Run `pip install --user --requirement requirements.txt`
 
 ## Usage
