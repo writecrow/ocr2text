@@ -29,12 +29,15 @@ A survey of existing PDF-to-TXT solutions found no extant solutions that meet al
 7. Then click **Environment Variables**.
 8. In the **System Variables** window, highlight **Path**, and click **Edit**.
 9. Click **New** to add an additional path.
-10. Paste the full path to the location of the new libraries (e.g., `C:\Users\mark\Desktop\ocr\`) and press **OK** on each open Control Panel window.
-11. Download [OCR2Text](https://github.com/writecrow/ocr2text/archive/master.zip) to `C:\Users\mark\Desktop\ocr`).
-12. Unzip the project.
-13. Open a `cmd.exe` terminal, and navigate to the folder via the command line (e.g., `cd Desktop\ocr\ocr2text-master`)
-14. Run `pip install --user --requirement requirements.txt`
-15. Optionally, you can check that you set up the PATH variable correctly in steps 6-10 by typing `echo %PATH%`. The output must include your equivalent of `C:\Users\mark\Desktop\ocr\Tesseract-OCR` for the script to work.
+10. Paste the full path to the location of the new libraries (e.g., `C:\Users\mark\Desktop\ocr\`) and press **OK**.
+11. Again, click **New** to add an additional path.
+12. Paste your equivalent of `C:\Users\mark\Desktop\ocr\poppler-0.68.0_x86\poppler-0.68.0\bin` and press **OK**.
+13. Press **OK** on any remaining control panel windows.
+14. Download [OCR2Text](https://github.com/writecrow/ocr2text/archive/master.zip) to `C:\Users\mark\Desktop\ocr`).
+15. Unzip the project.
+16. Open a `cmd.exe` terminal, and navigate to the folder via the command line (e.g., `cd Desktop\ocr\ocr2text-master`)
+17. Run `pip install --user --requirement requirements.txt`
+18. Optionally, you can check that you set up the PATH variable correctly in steps 6-10 by typing `echo %PATH%`. The output must include your equivalent of `C:\Users\mark\Desktop\ocr\Tesseract-OCR` and `C:\Users\mark\Desktop\ocr\poppler-0.68.0_x86\poppler-0.68.0\bin` for the script to work.
 
 
 ## macOS
