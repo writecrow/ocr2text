@@ -30,7 +30,7 @@ A survey of existing PDF-to-TXT solutions found no extant solutions that meet al
 8. In the **System Variables** window, highlight **Path**, and click **Edit**.
 9. Click **New** to add an additional path.
 10. Paste the full path to the location of the new libraries (e.g., `C:\Users\mark\Desktop\ocr\`) and press **Save** on each open Control Panel window.
-11. Download this Github project to `C:\Users\mark\Desktop\ocr`).
+11. Download [OCR2Text](https://github.com/writecrow/ocr2text/archive/master.zip) to `C:\Users\mark\Desktop\ocr`).
 12. Unzip the project.
 13. Open a `cmd.exe` terminal, and navigate to the folder via the command line (e.g., `cd \Users\mark\Desktop\ocr\ocr2text`)
 14. Run `pip install --user --requirement requirements.txt`
