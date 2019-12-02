@@ -19,21 +19,21 @@ A survey of existing PDF-to-TXT solutions found no extant solutions that meet al
 
 ## Windows
 
-1. Make a new folder on your Desktop called `ocr` (i.e., `C:\Users\mark\Desktop\ocr`)
+1. Make a new folder on your Desktop called `ocr` (e.g., `C:\Users\mark\Desktop\ocr`)
 2. Download and install the Tesseract 4 OCR library from [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki)
-2. The installation should indicate which directory Tesseract-OCR was installed. Most likely, this will either be `C:\Program Files (x86)\Tesseract-OCR` or `C:\Program Files\Tesseract-OCR`. **Move this folder into `C:\Users\mark\Desktop\ocr`, so that it is now located at `C:\Users\mark\Desktop\ocr\Tesseract-OCR`.**
+2. The installation should indicate which directory Tesseract-OCR was installed. Most likely, this will either be `C:\Program Files (x86)\Tesseract-OCR` or `C:\Program Files\Tesseract-OCR`. **Move this folder into your equivalent of `C:\Users\mark\Desktop\ocr`, so that it is now located at `Desktop\ocr\Tesseract-OCR`.**
 3. Download [poppler for Windows](http://blog.alivate.com.au/poppler-windows/). 
 4. You may need to install [7Zip](https://www.7-zip.org/) to unzip the executable, as well.
-5. Place the unzipped files in `C:\Users\mark\Desktop\ocr\poppler-0.68.0_x86`).
+5. Place the unzipped files in `Desktop\ocr\poppler-0.68.0_x86`).
 6. From your start menu, navigate to **Control Panel** > **System and Security** > **System** > **Advanced System Settings**
 7. Then click **Environment Variables**.
 8. In the **System Variables** window, highlight **Path**, and click **Edit**.
 9. Click **New** to add an additional path.
-10. Paste the full path to the location of the new libraries (e.g., `C:\Users\mark\Desktop\ocr\`) and press **OK**.
+10. Paste the full path to the location of Tesseract (e.g., `C:\Users\mark\Desktop\\ocr\Tesseract-OCR`) and press **OK**.
 11. Again, click **New** to add an additional path.
 12. Paste your equivalent of `C:\Users\mark\Desktop\ocr\poppler-0.68.0_x86\poppler-0.68.0\bin` and press **OK**.
 13. Press **OK** on any remaining control panel windows.
-14. Download [OCR2Text](https://github.com/writecrow/ocr2text/archive/master.zip) to `C:\Users\mark\Desktop\ocr`).
+14. Download [OCR2Text](https://github.com/writecrow/ocr2text/archive/master.zip) to `Desktop\ocr`).
 15. Unzip the project.
 16. Open a `cmd.exe` terminal, and navigate to the folder via the command line (e.g., `cd Desktop\ocr\ocr2text-master`)
 17. Run `pip install --user --requirement requirements.txt`
