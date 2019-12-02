@@ -21,7 +21,7 @@ A survey of existing PDF-to-TXT solutions found no extant solutions that meet al
 
 1. Make a new folder on your Desktop called `ocr` (i.e., `C:\Users\mark\Desktop\ocr`)
 2. Download and install the Tesseract 4 OCR library from [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki)
-2. The installation should indicate which directory Tesseract-OCR was installed. Most likely, this will either be `C:\Program Files (x86)\Tesseract-OCR` or `C:\Program Files\Tesseract-OCR`. *Move this folder into `C:\Users\mark\Desktop\ocr`, so that it is now located at `C:\Users\mark\Desktop\ocr\Tesseract-OCR`.*
+2. The installation should indicate which directory Tesseract-OCR was installed. Most likely, this will either be `C:\Program Files (x86)\Tesseract-OCR` or `C:\Program Files\Tesseract-OCR`. **Move this folder into `C:\Users\mark\Desktop\ocr`, so that it is now located at `C:\Users\mark\Desktop\ocr\Tesseract-OCR`.**
 3. Download [poppler for Windows](http://blog.alivate.com.au/poppler-windows/). 
 4. You may need to install [7Zip](https://www.7-zip.org/) to unzip the executable, as well.
 5. Place the unzipped files in `C:\Users\mark\Desktop\ocr\poppler-0.68.0_x86`).
@@ -29,7 +29,7 @@ A survey of existing PDF-to-TXT solutions found no extant solutions that meet al
 7. Then click **Environment Variables**.
 8. In the **System Variables** window, highlight **Path**, and click **Edit**.
 9. Click **New** to add an additional path.
-10. Paste the full path to the location of the new libraries (e.g., `C:\Users\mark\Desktop\ocr\`)
+10. Paste the full path to the location of the new libraries (e.g., `C:\Users\mark\Desktop\ocr\`) and press **Save** on each open Control Panel window.
 11. Download this Github project to `C:\Users\mark\Desktop\ocr`).
 12. Unzip the project.
 13. Open a `cmd.exe` terminal, and navigate to the folder via the command line (e.g., `cd \Users\mark\Desktop\ocr\ocr2text`)
