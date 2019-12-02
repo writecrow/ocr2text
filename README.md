@@ -2,10 +2,10 @@
 Given one or more PDFs that may include text-as-image content, use OCR (Optical Character Recognition) to convert the content to TXT files (in UTF-8 encoding).
 
 ## Rationale
-A survey of existing PDF-to-TXT solutions found no extant solutions that met all of the following criteria:
-- Is an offline tool (thus keeping secure identifying human-subject data)
-- Provides conversion from PDF to TXT (most existing OCR integrations assume an image as input)
-- Supports batch processing of multiple files
+A survey of existing PDF-to-TXT solutions found no extant solutions that meet all of the following criteria:
+- is an offline tool (to keep secure human-subject information)
+- provides conversion from PDF to TXT (most existing OCR integrations assume an image as input)
+- supports batch processing of multiple files
 
 ## Assumptions
 - This is (currently) a command-line tool, written in Python. Basic familiarity with executing commands in a terminal, as well as directory structure, is assumed. 
