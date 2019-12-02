@@ -14,81 +14,36 @@ A survey of existing PDF-to-TXT solutions found no extant solutions that met all
 
 ## Setup
 - [Windows](##windows)
-  * [Install Python requirements](#install-python-requirements)
-  * [Install Tesseract](#install-tesseract)
-  * [Install Poppler](#install-poppler)
+- [MacOS](##macos)
 
 ## Windows
 
-1. Download this project to any empty folder on your Windows machine (for example, `C:\Users\mark\Desktop`).
-2. After unzipping the project, navigate to the folder via the command line and run the following command:
-
-```
-pip install --user --requirement requirements.txt
-```
-
-## Install Tesseract
-
-### Linux:
-```
-sudo apt-get install tesseract-ocr
-```
-
-### macOS
-
-You can install Tesseract using either [MacPorts](https://www.macports.org/) or [Homebrew](http://brew.sh).
-
-#### MacPorts
-To install Tesseract run this command: 
-```
-sudo port install tesseract
-```
-
-#### Homebrew
-To install Tesseract run this command:
-```
-brew install tesseract
-```
-
-### Windows
-
-Installer for Windows for Tesseract 3.05 and Tesseract 4 are available from [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki). These include the training tools. Both 32-bit and 64-bit installers are available.
-
-To access tesseract-OCR from any location you may have to add the directory where the tesseract-OCR binaries are located to the Path variables [see screenshots](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/):
+1. Make a new folder on your Desktop called `ocr` (i.e., `C:\Users\mark\Desktop\ocr`)
+2. Download and install the Tesseract 4 OCR library from [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki)
+2. The installation should indicate which directory Tesseract-OCR was installed. Most likely, this will either be `C:\Program Files (x86)\Tesseract-OCR` or `C:\Program Files\Tesseract-OCR`. *Move this folder into `C:\Users\mark\Desktop\ocr`, so that it is now located at `C:\Users\mark\Desktop\ocr\Tesseract-OCR`.*
+3. Download [poppler for Windows](http://blog.alivate.com.au/poppler-windows/). 
+4. You may need to install [7Zip](https://www.7-zip.org/) to unzip the executable, as well.
+5. Place the unzipped files in `C:\Users\mark\Desktop\ocr\poppler-0.68.0_x86`).
+6. From your start menu, navigate to **Control Panel** > **System and Security** > **System** > **Advanced System Settings**
+7. Then click **Environment Variables**.
+8. In the **System Variables** window, highlight **Path**, and click **Edit**.
+9. Click **New** to add an additional path.
+10. Paste the full path to the location of the new libraries (e.g., `C:\Users\mark\Desktop\ocr\`)
+11. Download this Github project to `C:\Users\mark\Desktop\ocr`).
+12. Unzip the project.
+13. Open a `cmd.exe` terminal, and navigate to the folder via the command line (e.g., `cd \Users\mark\Desktop\ocr\ocr2text`)
+14. Run `pip install --user --requirement requirements.txt`
+15. Optionally, you can check that you set up the PATH variable correctly in steps 6-10 by typing `echo %PATH%`. The output must include your equivalent of `C:\Users\mark\Desktop\ocr\` for the script to work.
 
 
-0. Find the directory where Tesseract-OCR was installed. Most likely, this will either be `C:\Program Files (x86)\Tesseract-OCR` or `C:\Program Files\Tesseract-OCR`
-0. Navigate to **Control Panel** > **System and Security** > **System** > **Advanced System Settings**
-0. Then click **Environment Variables**.
-0. In the **System Variables** window, highlight **Path**, and click **Edit**.
-0. Click **New** to add an additional path.
-0. Paste the full path to the location of Tesseract-OCR. For example:
-
-```bash
-path C:\Program Files (x86)\Tesseract-OCR
-```
-
-Click **OK** in each open window.
-The new path will be used the next time a command prompt is opened, or a service is started.
-
-## Install Poppler
-
-### Windows
-
-0. Windows users will have to download [poppler for Windows](http://blog.alivate.com.au/poppler-windows/). 
-0. You may need to install [7Zip](https://www.7-zip.org/) to unzip the executable, as well.
-0. Copy the full path to where you unzip the executable, which is in the `bin` directory (e.g. `C:\Users\mark\Desktop\poppler-0.68.0_x86\poppler-0.68.0\bin`).
- then add the `bin/` folder to [PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
-0. Add that path to your **Environment Variables**' settings for **Path**, as you did for Tesseract-OCR, above.
-
-### Mac
-
-Mac users will have to install [poppler for Mac](http://macappstore.org/poppler/).
-
-### Linux
-
-Most distros ship with `pdftoppm` and `pdftocairo`. If they are not installed, refer to your package manager to install `poppler-utils`
-
+## macOS
+1. Make a new folder on your Desktop called `ocr` (i.e., `/Users/mark/Desktop/ocr`)
+2. Install Tesseract-OCR using either MacPorts (`sudo port install tesseract`) or Homebrew (`brew install tesseract`
+3. Install [poppler for Mac](http://macappstore.org/poppler/).
+4. Download this Github project to `/Users/mark/Desktop/ocr`).
+5. Unzip the project.
+6. Open a terminal and navigate to the folder via the command line (e.g., `cd /Users/mark/Desktop/ocr/ocr2text`)
+7. Run `pip install --user --requirement requirements.txt`
 
 ## Usage
 If you have successfully completed the setup steps and are using Python version 3, usage should now be a breeze:
