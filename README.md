@@ -35,9 +35,10 @@ A survey of existing PDF-to-TXT solutions found no extant solutions that meet al
 13. Press **OK** on any remaining control panel windows.
 14. Download [OCR2Text](https://github.com/writecrow/ocr2text/archive/master.zip) to `Desktop\ocr`).
 15. Unzip the project.
-16. Open a `cmd.exe` terminal, and navigate to the folder via the command line (e.g., `cd Desktop\ocr\ocr2text-master`)
-17. Run `pip install --user --requirement requirements.txt`
-18. Optionally, you can check that you set up the PATH variable correctly in steps 6-10 by typing `echo %PATH%`. The output must include your equivalent of `C:\Users\mark\Desktop\ocr\Tesseract-OCR` and `C:\Users\mark\Desktop\ocr\poppler-0.68.0_x86\poppler-0.68.0\bin` for the script to work.
+16. If using Python version 3.8, open requirements.txt at your equivalent of `C:\Users\mark\Desktop\ocr\ocr2text-main\requirements.txt` and bump Pillow version from 6.2.0 to 6.2.1 or higher. 
+17. Open a `cmd.exe` terminal, and navigate to the folder via the command line (e.g., `cd Desktop\ocr\ocr2text-main`)
+18. Run `pip install --user --requirement requirements.txt`
+19. Optionally, you can check that you set up the PATH variable correctly in steps 6-10 by typing `echo %PATH%`. The output must include your equivalent of `C:\Users\mark\Desktop\ocr\Tesseract-OCR` and `C:\Users\mark\Desktop\ocr\poppler-0.68.0_x86\poppler-0.68.0\bin` for the script to work.
 
 
 ## macOS
